@@ -1,0 +1,4 @@
+# AOP请求拦截、跨域请求、在线文档
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.io.config.AopAutoConfig,\
+com.io.config.CorsAutoConfig

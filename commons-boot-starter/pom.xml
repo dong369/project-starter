@@ -2,26 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>project-starter</artifactId>
-        <groupId>com.io</groupId>
-        <version>${starter.version}</version>
-    </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>com.io</groupId>
+        <artifactId>project-starter</artifactId>
+        <version>${starter.version}</version>
+    </parent>
+
+    <groupId>com.io</groupId>
     <artifactId>commons-boot-starter</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-            <version>4.5.11</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-    </dependencies>
-
+    <version>1.0</version>
+    <packaging>jar</packaging>
 
 </project>

@@ -2,24 +2,56 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.io</groupId>
+    <version>1.0</version>
+    <artifactId>elasticsearch-spring-boot-starter</artifactId>
+
     <parent>
-        <artifactId>project-starter</artifactId>
         <groupId>com.io</groupId>
+        <artifactId>project-starter</artifactId>
         <version>${starter.version}</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>elasticsearch-spring-boot-starter</artifactId>
 
     <properties>
         <elasticsearch.version>7.3.0</elasticsearch.version>
     </properties>
-
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.2.5.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>com.io</groupId>
             <artifactId>commons-boot-starter</artifactId>
-            <version>${starter.version}</version>
+            <version>1.0</version>
         </dependency>
         <!-- elasticsearch -->
         <dependency>
@@ -40,7 +72,7 @@
     </dependencies>
 
     <build>
-        <finalName>${project.name}</finalName>
+        <finalName>${project.name}-1.0</finalName>
     </build>
 
 </project>
